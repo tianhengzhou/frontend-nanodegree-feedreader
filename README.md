@@ -1,4 +1,5 @@
 # This is a jasmine unit test suite for a feed reader.
+
 ## How to run this test suite?
 -  Download the master branch file and unzip it.
 -  Make sure you have python pre-install in your computer. Mac and Linux are coming with python, so don't worry. For windows, download python from this link: https://www.python.org/downloads/windows/
@@ -6,6 +7,7 @@
 -  Open a terminal or command line tool. Type python -m SimpleHTTPServer [port]
 -  Open a browser then type localhost:[port]
 -  By this way, you will render index.html file and see the Jasmine is running test.
+
 ## Test Coverage
 -  Test Suite 1: Check the url and name is defined for RSS feed.
 -  Test Suite 2: Check the menu can hide/show itself with clicking the menu icon link.
