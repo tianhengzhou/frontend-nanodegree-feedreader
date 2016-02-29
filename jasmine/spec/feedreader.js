@@ -35,7 +35,7 @@ $(function() {
             allFeeds.forEach(function(item){
                 expect(item.url).toBeDefined();
                 expect(item.url).not.toBe('');
-            })
+            });
         });
 
         /* Write a test that loops through each feed
@@ -46,7 +46,7 @@ $(function() {
             allFeeds.forEach(function (item) {
                 expect(item.name).toBeDefined();
                 expect(item.name).not.toBe('');
-            })
+            });
         });
     });
     /* Write a new test suite named "The menu" */
@@ -71,12 +71,12 @@ $(function() {
             expect(body.hasClass('menu-hidden')).toBe(false);
             menuIcon.click();
             expect(body.hasClass('menu-hidden')).toBe(true);
-        })
+        });
     });
     /* Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function () {
         beforeEach(function (done) {
-            loadFeed(0, done)
+            loadFeed(0, done);
         });
         /* Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -87,7 +87,7 @@ $(function() {
         it('has at least a single element in feed', function () {
             var entries = $('.feed .entry');
             expect(entries.length).toBeGreaterThan(0);
-        })
+        });
     });
     /* Write a new test suite named "New Feed Selection"*/
      describe('New Feed Selection', function () {
@@ -101,8 +101,8 @@ $(function() {
                 loadFeed(1, function () {
                     feed_aft = head_title.text() + entries.text();
                     done();
-                })
-            })
+                });
+            });
         });
          /* Write a test that ensures when a new feed is loaded
           * by the loadFeed function that the content actually changes.
@@ -111,6 +111,6 @@ $(function() {
         it('changes feed content', function (done) {
             expect(feed_bef).not.toEqual(feed_aft);
             done();
-        })
+        });
     });
 }());
